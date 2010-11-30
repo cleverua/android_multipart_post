@@ -1,0 +1,21 @@
+== DESCRIPTION
+
+Need to post an image to a server? Or just send a plain POST request in a snap?
+This simple framework is to help.
+
+== USAGE
+
+First you have to set up request parameters, they can be either string of file type, see below:
+
+  List<PostParameter> params = new ArrayList<PostParameter>();
+  params.add(new PostParameter<String>("fullname", "John Doe"));
+  params.add(new PostParameter<File>("headshot", new
+  File(Environment.getExternalStorageDirectory() + "/headshot.png"));
+
+Then you just send the params to server by calling this:
+
+  MultipartPost post = new MultipartPost(params);
+  post.send("http://www.yourhost.com");
+
+That's all.
+
