@@ -9,8 +9,7 @@ First you have to set up request parameters, they can be either string of file t
 
   List<PostParameter> params = new ArrayList<PostParameter>();
   params.add(new PostParameter<String>("fullname", "John Doe"));
-  params.add(new PostParameter<File>("headshot", new
-  File(Environment.getExternalStorageDirectory() + "/headshot.png"));
+  params.add(new PostParameter<File>("headshot", new File(Environment.getExternalStorageDirectory() + "/headshot.png"));
 
 Then you just send the params to server by calling this:
 
